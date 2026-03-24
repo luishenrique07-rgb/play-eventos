@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/fazer_inscricao.css">
+    <title>Realizar Inscricao</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="navbar-brand" href="home.html">Play Eventos</a>
+            <div class="navbar-links">
+                <a class="nav-link" href="home.html">Inicio</a>
+                <a class="nav-link" href="cadastrar_evento.html">Cadastrar Evento</a>
+                <a class="nav-link" href="fazer_inscricao.html">Inscricoes</a>
+                <a class="nav-link" href="sobre.html">Sobre o Evento</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="card-header">
+            <h1>Realizar Inscricao</h1>
+        </div>
+
+        <form action="#" method="post" name="formulario_inscricao" id="formulario_inscricao">
+            <div class="form-group">
+                <label for="cpf" class="form-label">CPF</label>
+                <input placeholder="123.456.789-10" type="text" class="form-control" name="cpf" id="cpf">
+            </div>
+
+            <div class="form-group">
+                <label for="nome" class="form-label">Nome</label>
+                <input placeholder="Escreva seu Nome Completo" type="text" class="form-control" name="nome" id="nome">
+            </div>
+
+            <div class="form-group">
+                <label for="select_evento" class="form-label">Selecione o evento</label>
+                <select class="form-control" name="select_evento" id="select_evento" required>
+                    <option value="" disabled selected>Selecione</option>
+                    <option value="1">Qual é o melhor Resident Evil</option>
+                    <option value="2">Torneio de CSGO</option>
+                    <option value="3">Sera que vocé conhece o Spider-man</option>
+                    <option value="4">Qual Jogo de FPS é o melhor nos Dias de Hoje</option>
+                </select>
+            </div>
+
+            <div class="actions">
+                <button type="button" class="btn btn-danger" id="btn_cancelar">Cancelar</button>
+                <button type="submit" class="btn btn-success" id="btn_envia_formulario_inscricao">Fazer Inscricao</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
