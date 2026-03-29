@@ -1,0 +1,135 @@
+﻿:root {
+    /* Variaveis de cor para manter o padrao visual */
+    --preto: #1f192f;
+    --azul-marinho: #323435;
+    --azul: #00a8c6;
+    --cinza-claro: #f1f0ee;
+}
+
+* {
+    /* Inclui borda e padding no tamanho final dos elementos */
+    box-sizing: border-box;
+}
+
+body {
+    /* Remove margem padrao e aplica fonte geral */
+    margin: 0;
+    background-color: var(--cinza-claro);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+    /* Barra de navegacao centralizada */
+    background-color: var(--preto);
+    color: white;
+    padding: 12px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.navbar-brand {
+    /* Nome da marca */
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.navbar-links {
+    /* Grupo de links do menu */
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-link {
+    /* Link comum da navegacao */
+    color: white;
+    text-decoration: none;
+    padding: 8px;
+}
+
+.nav-link:hover {
+    /* Destaque ao passar o mouse */
+    color: var(--azul);
+    border-bottom: 1px solid var(--azul);
+}
+
+.container {
+    /* Card principal do formulario */
+    width: min(700px, 92%);
+    margin: 24px auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.card-header {
+    /* Cabecalho do formulario */
+    background-color: var(--azul-marinho);
+    color: white;
+    padding: 16px;
+}
+
+.card-header h1 {
+    /* Titulo principal da pagina */
+    margin: 0;
+    font-size: 24px;
+}
+
+form {
+    /* Espaco interno do formulario */
+    padding: 16px;
+}
+
+.form-group {
+    /* Agrupa label + campo */
+    margin-bottom: 12px;
+}
+
+.form-label {
+    /* Rotulo de cada campo */
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.form-control {
+    /* Estilo padrao dos inputs */
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.actions {
+    /* Area dos botoes */
+    margin-top: 14px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    /* Botao base reutilizavel */
+    border: none;
+    border-radius: 4px;
+    padding: 10px 18px;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-danger {
+    /* Botao vermelho (cancelar) */
+    background-color: #dc3545;
+}
+
+.btn-success {
+    /* Botao verde (acao principal) */
+    background-color: #07a6ac;
+}

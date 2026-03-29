@@ -1,0 +1,203 @@
+:root {
+    /* Variaveis de cor para reutilizar no arquivo */
+    --preto: #111113;
+    --azul-marinho: #ff0000;
+    --azul: #00a8c6;
+    --cinza-claro: #f1f0ee;
+}
+
+* {
+    /* Faz padding e borda entrarem no calculo da largura total */
+    box-sizing: border-box;
+}
+
+body {
+    /* Remove margem padrao do navegador */
+    margin: 0;
+    /* Cor de fundo principal da pagina */
+    background-color: var(--cinza-claro);
+    /* Fonte simples e legivel para iniciantes */
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #1c1c1d;
+}
+
+.navbar {
+    /* Fundo escuro da barra de navegacao */
+    background-color: var(--preto);
+    /* Flexbox para organizar os itens */
+    display: flex;
+    /* Deixa os itens um embaixo do outro para centralizar tudo */
+    flex-direction: column;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente dentro da barra */
+    justify-content: center;
+    gap: 12px;
+    /* Espacamento interno da barra */
+    padding: 12px 20px;
+}
+
+.navbar-brand {
+    /* Estilo do nome da marca */
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.navbar-links {
+    /* Links de navegacao em linha */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+.nav-link {
+    /* Estilo base dos links */
+    color: white;
+    text-decoration: none;
+    padding: 8px;
+}
+
+.nav-link:hover {
+    /* Efeito ao passar o mouse no link */
+    color: var(--azul);
+    border-bottom: 1px solid var(--azul);
+}
+
+
+.form-control {
+    /* Campo de entrada padrao */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn {
+    /* Botao base reutilizavel */
+    border: none;
+    border-radius: 4px;
+    padding: 8px 14px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-outline-light {
+    /* Botao com fundo transparente e borda clara */
+    background: transparent;
+    border: 1px solid white;
+}
+
+.btn-outline-light:hover {
+    /* Inverte as cores ao passar o mouse */
+    background-color: white;
+    color: var(--preto);
+}
+
+.banner {
+    /* Banner principal da pagina */
+    min-height: 350px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("../img/titanfal.jpg");
+    background-position: center;
+    background-size: contain;
+}
+
+.banner-content {
+    /* Limita largura do texto do banner */
+    max-width: 700px;
+    color: white;
+}
+
+.banner-content h1 {
+    /* Ajuste de espaco do titulo */
+    margin: 0 0 8px;
+}
+
+.container-eventos {
+    /* Container dos cards de eventos */
+    max-width: 1000px;
+    margin: 24px auto;
+    padding: 0 16px;
+}
+
+.container-eventos h2 {
+    /* Espaco abaixo do subtitulo */
+    margin-bottom: 16px;
+}
+
+.cards-grid {
+    /* Grid responsivo para os cards */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 16px;
+}
+
+.card {
+    /* Bloco visual de cada evento */
+    background: rgb(136, 127, 127);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.img-evento {
+    /* Imagem padronizada do card */
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-body {
+    /* Conteudo interno do card */
+    padding: 16px;
+}
+
+.card-body h3 {
+    /* Remove espaco acima do titulo */
+    margin-top: 0;
+}
+
+.card-actions {
+    /* Area dos botoes do card */
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.btn-info {
+    /* Cor do botao de detalhes */
+    background-color: var(--azul-marinho);
+}
+
+.btn-dark {
+    /* Cor do botao de inscricao */
+    background-color: rgba(38, 64, 66, 0.938);
+}
+
+footer {
+    /* Rodape simples */
+    margin-top: 280px;
+    padding: 10px;
+    text-align: center;
+    background-color: var(--preto);
+    color: rgb(223, 217, 217);
+}
+
+@media (max-width: 768px) {
+    /* Ajustes para telas menores */
+    .form-control {
+        width: 100%;
+    }
+
+    .card-actions {
+        flex-direction: column;
+    }
+}
+

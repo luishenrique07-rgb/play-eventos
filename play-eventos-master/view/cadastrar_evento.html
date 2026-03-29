@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/cadastrar_eventos.css">
+    <title>Cadastrar Evento</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="navbar-brand" href="home.html">UPF Eventos</a>
+            <div class="navbar-links">
+                <a class="nav-link" href="home.html">Inicio</a>
+                <a class="nav-link" href="cadastrar_evento.html">Cadastrar Evento</a>
+                <a class="nav-link" href="fazer_inscricao.html">Inscricoes</a>
+                <a class="nav-link" href="sobre.html">Sobre o Evento</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="card-header">
+            <h1>Cadastrar Evento</h1>
+        </div>
+
+        <form action="#" method="post" name="formulario_evento" id="formulario_evento">
+            <div class="form-group">
+                <label for="nome" class="form-label">Nome do evento</label>
+                <input type="text" class="form-control" id="nome" name="nome" required>
+            </div>
+
+            <div class="form-group">
+                <label for="carga_horaria" class="form-label">Carga horaria (horas)</label>
+                <input type="number" class="form-control" min="1" name="carga_horaria" id="carga_horaria" required>
+            </div>
+
+            <div class="form-group">
+                <label for="valor" class="form-label">Valor (R$)</label>
+                <input type="number" class="form-control" min="0" step="0.01" name="valor" id="valor" required>
+            </div>
+
+            <div class="form-group">
+                <label for="data_inicio" class="form-label">Data de inicio</label>
+                <input type="date" class="form-control" name="data_inicio" id="data_inicio" required>
+            </div>
+
+            <div class="form-group">
+                <label for="data_fim" class="form-label">Data de encerramento</label>
+                <input type="date" class="form-control" name="data_fim" id="data_fim" required>
+            </div>
+
+            <div class="form-group">
+                <label for="descricao" class="form-label">Descricao</label>
+                <textarea class="form-control" name="descricao" id="descricao" rows="4" required></textarea>
+            </div>
+
+            <div class="actions">
+                <button type="button" class="btn btn-danger" id="btn_cancelar">Cancelar</button>
+                <button type="submit" class="btn btn-success" id="btn_envia_formulario_evento">Cadastrar</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
